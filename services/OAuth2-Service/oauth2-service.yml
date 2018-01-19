@@ -1,0 +1,22 @@
+server:
+  port: 9005
+  context-path: /auth-server
+security:
+  basic:
+    enabled: false
+signing:
+  key: SomeRandomString
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: null
+    password: null
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        id:
+          new_generator_mappings: false
+        format_sql: true
