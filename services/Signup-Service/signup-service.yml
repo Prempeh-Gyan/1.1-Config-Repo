@@ -1,0 +1,52 @@
+server:
+  port: 9002
+spring:
+  application:
+    name: signup-service
+  cloud:
+    config:
+      enabled: true
+    stream:
+      bindings:
+        input:
+          destination: signup-queue
+          group: signup-group
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
+          zkNodes: localhost
+          defaultZkPort: 2181
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/howtoprogramdb?createDatabaseIfNotExist=true
+    username: '{cipher}39b623cae2561eefc65b57c1313435763209b8c1b5e988d5d86c1068e2d00e1d'
+    password: '{cipher}af38f4b9f9436d0634e0178c28b11819de8601526ddf7b53385c134ec8db0c1a329e78d64e12df9574ce59184e7c20ec088bce8ec7f3aca32b694bb7cbf0f413347625c010ba4b36d889ce212ca55afb'
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        id:
+          new_generator_mappings: false
+        format_sql: true
+  sleuth:
+    enabled: true
+    sampler:
+      percentage: 1
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    locator:
+      discovery:
+        enabled: true
+    service:
+      name: tracing-service
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8889/eureka}
+  instance:
+    prefer-ip-address: true
