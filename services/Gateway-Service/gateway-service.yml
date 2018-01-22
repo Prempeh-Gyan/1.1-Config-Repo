@@ -17,10 +17,10 @@ security:
     client:
       client-id: fooClientIdPassword
       client-secret: secret
-      access-token-uri: http://localhost:9005/auth-server/oauth/token
-      user-authorization-uri: http://localhost:9005/auth-server/oauth/authorize
+      access-token-uri: http://localhost:9000/auth-server/oauth/token
+      user-authorization-uri: http://localhost:9000/auth-server/oauth/authorize
     resource:
-      user-info-uri: http://localhost:9005/auth-server/user
+      user-info-uri: http://localhost:9000/auth-server/user
 spring:
   application:
     name: gateway-service
