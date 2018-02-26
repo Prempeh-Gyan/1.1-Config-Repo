@@ -1,0 +1,23 @@
+server:
+  port: 9003
+spring:
+  application:
+    name: tracing-service
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      name: tracing-service
+eureka:
+  client:
+    region: default
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8889/eureka}
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    org.springframework.web: debug
