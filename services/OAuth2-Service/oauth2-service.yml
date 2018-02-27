@@ -7,6 +7,8 @@ security:
 signing:
   key: SomeRandomString
 spring:
+  application:
+    name: authorization-service
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/howtoprogramdb?createDatabaseIfNotExist=true
