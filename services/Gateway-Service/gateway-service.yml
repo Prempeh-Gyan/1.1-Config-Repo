@@ -15,7 +15,7 @@ security:
     enabled: false
   oauth2:
     client:
-      client-id: fooClientIdPassword
+      client-id: TestClientOne
       client-secret: secret
       access-token-uri: http://localhost:9000/auth-server/oauth/token
       user-authorization-uri: http://localhost:9000/auth-server/oauth/authorize
