@@ -1,8 +1,25 @@
 server:
   port: 9002
+support:
+  email: something@somewhere.com
 spring:
   application:
     name: signup-service
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    protocol: smtps
+    username: somesecretusername@somewhere.com
+    password: alsosomesecretpassword
+    properties:
+      mail:
+        transport:
+          protocol: smtps
+        stmps:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 2000
   cloud:
     config:
       enabled: true
