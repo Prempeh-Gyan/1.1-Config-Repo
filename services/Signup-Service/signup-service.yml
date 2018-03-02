@@ -15,7 +15,7 @@ spring:
       mail:
         transport:
           protocol: smtps
-        stmps:
+        smtps:
           auth: true
           starttls:
             enable: true
