@@ -7,7 +7,7 @@ security:
     enabled: false
   oauth2:
     resource:
-      user-info-uri: http://localhost:9000/auth-server/user
+      user-info-uri: http://localhost:9013/auth-server/user
 spring:
   application:
     name: search-service
@@ -38,7 +38,7 @@ spring:
     port: 6379
   zipkin:
     enabled: true
-    base-url: http://localhost:9411
+    base-url: http://localhost:9015
     locator:
       discovery:
         enabled: true
@@ -48,6 +48,6 @@ eureka:
   client:
     register-with-eureka: true
     service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:8889/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:9012/eureka}
   instance:
     prefer-ip-address: true

@@ -1,5 +1,5 @@
 server:
-  port: 9003
+  port: 9015
 spring:
   application:
     name: tracing-service
@@ -14,7 +14,7 @@ eureka:
     region: default
     registry-fetch-interval-seconds: 5
     service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:8889/eureka}
+      defaultZone: ${EUREKA_URI:http://localhost:9012/eureka}
     register-with-eureka: true
   instance:
     prefer-ip-address: true
