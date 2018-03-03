@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9014
 eureka:
   instance:
     prefer-ip-address: true
@@ -16,7 +16,7 @@ security:
   oauth2:
     client:
       client-id: TestClientOne
-      client-secret: secret
+      client-secret: TestSecretOne
       access-token-uri: http://localhost:9000/auth-server/oauth/token
       user-authorization-uri: http://localhost:9000/auth-server/oauth/authorize
     resource:
