@@ -15,8 +15,8 @@ security:
     enabled: false
   oauth2:
     client:
-      client-id: TestClientOne
-      client-secret: TestSecretOne
+      client-id: TestClientTwo
+      client-secret: TestSecretTwo
       access-token-uri: http://localhost:9013/auth-server/oauth/token
       user-authorization-uri: http://localhost:9013/auth-server/oauth/authorize
     resource:
