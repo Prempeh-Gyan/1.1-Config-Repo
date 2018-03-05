@@ -19,7 +19,6 @@ security:
       client-secret: TestSecretOne
       access-token-uri: http://localhost:9013/auth-server/oauth/token
       user-authorization-uri: http://localhost:9013/auth-server/oauth/authorize
-      grant-type: password
     resource:
       user-info-uri: http://localhost:9013/auth-server/user
 spring:
